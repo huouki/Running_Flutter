@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'dart:ui';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 void main() {
@@ -54,7 +54,7 @@ class _MyApp extends  State<MyApp> {
       home: 
       Scaffold( backgroundColor: Colors.purple[40],
         appBar: 
-        AppBar(title: Text('Cabuso Running Flutter'),
+        AppBar(title: Text('Lavander Login'),
         backgroundColor: Colors.purple[200],
         ),
         body: 
@@ -62,6 +62,7 @@ class _MyApp extends  State<MyApp> {
           child: Container(
             width: 400,
             height: 500,
+            padding: EdgeInsets.all(0),
             decoration: BoxDecoration(              
             gradient: LinearGradient(begin: 
             Alignment.centerLeft,
@@ -82,16 +83,16 @@ class _MyApp extends  State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
                 
-              Image.asset('images/lavander(2).png',),
+              Image.asset('images/lavander(2).png', alignment: AlignmentGeometry.topCenter,),
 
               Padding(padding: EdgeInsets.only(bottom: 30, top: 10)), //spacee between objectsss
               
-              Text('Login to See Lavander', style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold, fontSize: 25, fontFamily: 'OpenSans'),),
+              Text('Login to Know Lavander', style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold, fontSize: 25, fontFamily: 'OpenSans'),),
 
-              Padding(padding: EdgeInsets.all(25)), //spacee between objectsss
+              Padding(padding: EdgeInsets.all(20)), //spacee between objectsss
 
                SizedBox(
-            width: 180,
+            width: 230,
 
             child: TextField(
               controller: userController,
@@ -109,7 +110,7 @@ class _MyApp extends  State<MyApp> {
           Padding(padding: EdgeInsets.all(10)), // eto para may space kayo
 
           SizedBox(
-            width: 180,
+            width: 230,
             child: TextField(
               controller: passController,
               obscureText: concealPass,
@@ -188,19 +189,35 @@ class Homepage extends StatelessWidget {
       home: 
       Scaffold( backgroundColor: Colors.purple[40],
         appBar: 
-        AppBar(title: Text('Demo App'),
+        AppBar(title: Text('Lavander Home Page'),
         backgroundColor: Colors.purple[100],
         ),
         body: 
         Center(
+          
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text('Tamma Ba????'),
+              Padding(padding: EdgeInsets.all(0)),
+               Container(
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
+                ),
+                child:
+              Image.asset('images/lavander_header.jpg', width: 600, opacity: const AlwaysStoppedAnimation(.7),),
+               ),
+              Padding(padding: EdgeInsets.all(5)),
+              SizedBox(
+                width: 350,
+                child: Text('Lavandula (common name lavender) is a genus of 47 known species of perennial flowering plants in the sage family, Lamiaceae. It is native to the Old World, primarily found across the drier, warmer regions of the Mediterranean, with an affinity for maritime breezes.', textAlign:  TextAlign.justify, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.normal, fontSize: 15),),
+              ),
+              
               Padding(padding: EdgeInsets.all(50)),//spacee between objectsss
               
             ],
           ),
+
           ),
       ),
     );
