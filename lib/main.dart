@@ -7,9 +7,6 @@ void main() {
 }
 void dispose() {
 }
-
-
-
 final userController = TextEditingController();
 final passController = TextEditingController();
 bool concealPass = true;
@@ -54,7 +51,9 @@ class _MyApp extends  State<MyApp> {
       home: 
       Scaffold( backgroundColor: Colors.purple[40],
         appBar: 
-        AppBar(title: Text('Lavander Login'),
+        AppBar(
+          title: Text('Lavander Login', style: TextStyle(fontFamily: 'OpenSans'),),
+
         backgroundColor: Colors.purple[200],
         ),
         body: 
@@ -189,7 +188,7 @@ class Homepage extends StatelessWidget {
       home: 
       Scaffold( backgroundColor: Colors.purple[40],
         appBar: 
-        AppBar(title: Text('Lavander Home Page'),
+        AppBar(title: Text('Lavander Home Page', style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.bold)),
         backgroundColor: Colors.purple[100],
         ),
         body: 
@@ -207,11 +206,12 @@ class Homepage extends StatelessWidget {
                   borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
                 ),
                 child:
-              Image.asset('images/lavander_header.jpg', width: 600, opacity: const AlwaysStoppedAnimation(.7),),
+              Image.asset('images/lavander_header.jpg', width: 800, opacity: const AlwaysStoppedAnimation(.7),),
                ),
               Padding(padding: EdgeInsets.all(5)),
               Padding(padding: EdgeInsets.only(left: 30, right: 30, ),
               child: SizedBox(
+                width: 650,
                 child: Column(
                   children: [
                  Text('Lavandula also known as Lavander is a genus of 47 known species of perennial flowering plants in the sage family, Lamiaceae.', textAlign:  TextAlign.justify, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.normal, fontSize: 15),),
@@ -246,23 +246,36 @@ class Homepage extends StatelessWidget {
                     
               Padding(padding: EdgeInsets.only(left: 30, right: 30, ),
                  child:  SizedBox(
+                  width: 650,
                 child: Column(
+                  children: [
+                  Container(
+                    
+                    decoration: 
+                    BoxDecoration(borderRadius: BorderRadius.circular(10),
+                    color: Colors.deepPurple[100],
+                    ),
+                 child: Column(
                   children: [
                  Text('Supports Sleep', textAlign: TextAlign.start, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.bold, fontSize: 20,),),
                  Padding(padding: EdgeInsetsGeometry.all(3)),
                  Text('Because of its calming scent, many people find benefits from using lavender-infused fragrances before bed as a form of aromatherapy.', textAlign:  TextAlign.justify, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.normal, fontSize: 15),),
-                 Padding(padding: EdgeInsetsGeometry.all(10)),
-
+                 Padding(padding: EdgeInsetsGeometry.all(15)),
+                  ]
+                 )
+                ),
                  Text('Reduces pain and inflammation', textAlign: TextAlign.start, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.bold, fontSize: 20,),),
                  Padding(padding: EdgeInsetsGeometry.all(3)),
                  Text('“One of the chemical compounds in lavender include flavonoids, which are also found in vegetables and fruits, and coumarin. Both have anti-inflammatory and antioxidant actions,” explains Dr. Lin.', textAlign:  TextAlign.justify, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.normal, fontSize: 15),),
-                 Padding(padding: EdgeInsetsGeometry.all(10)),
+                 Padding(padding: EdgeInsetsGeometry.all(15)),
 
                  Text('Helps with mood, anxiety and depression', textAlign: TextAlign.start, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.bold, fontSize: 20,),),
                  Padding(padding: EdgeInsetsGeometry.all(3)),
-                 Text('“Lavender is known for its ability to calm your nervous system, lift your mood and even lower blood pressure,” Dr. Lin points out. “For example, lavender essential oil contains important compounds such as linalool, which has been shown to reduce anxiety and lower blood pressure.', textAlign:  TextAlign.justify, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.normal, fontSize: 15),),
-                 Padding(padding: EdgeInsetsGeometry.all(15)),
-
+                 Text('“Lavender is known for its ability to calm your nervous system, lift your mood and even lower blood pressure,” Dr. Lin points out.', textAlign:  TextAlign.justify, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.normal, fontSize: 15),),
+                 Padding(padding: EdgeInsetsGeometry.all(3)),
+                 Text('“For example, lavender essential oil contains important compounds such as linalool, which has been shown to reduce anxiety and lower blood pressure.', textAlign:  TextAlign.justify, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.normal, fontSize: 15),),
+                 Padding(padding: EdgeInsetsGeometry.all(25)),
+ 
                  Text('Reference:', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
                  
                  Text('https://health.clevelandclinic.org/health-benefits-of-lavender'),
