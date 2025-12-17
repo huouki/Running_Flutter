@@ -52,7 +52,7 @@ class _MyApp extends  State<MyApp> {
       Scaffold( backgroundColor: Colors.purple[40],
         appBar: 
         AppBar(
-          title: Text('Lavander Login', style: TextStyle(fontFamily: 'OpenSans'),),
+          title: Text('Lavander Login', style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.bold),),
 
         backgroundColor: Colors.purple[200],
         ),
@@ -249,33 +249,66 @@ class Homepage extends StatelessWidget {
                   width: 650,
                 child: Column(
                   children: [
-                  Container(
-                    
+                  Container(      
                     decoration: 
                     BoxDecoration(borderRadius: BorderRadius.circular(10),
                     color: Colors.deepPurple[100],
                     ),
-                 child: Column(
+                 child: Padding(padding: 
+                  EdgeInsets.all(15),
+                  child: Column(
                   children: [
                  Text('Supports Sleep', textAlign: TextAlign.start, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.bold, fontSize: 20,),),
                  Padding(padding: EdgeInsetsGeometry.all(3)),
                  Text('Because of its calming scent, many people find benefits from using lavender-infused fragrances before bed as a form of aromatherapy.', textAlign:  TextAlign.justify, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.normal, fontSize: 15),),
                  Padding(padding: EdgeInsetsGeometry.all(15)),
-                  ]
-                 )
+                 ],
                 ),
+                  ),
+                  ),
+                Padding(padding: EdgeInsetsGeometry.all(15)),
+                
+                Container(      
+                    decoration: 
+                    BoxDecoration(borderRadius: BorderRadius.circular(10),
+                    color: Colors.deepPurple[100],
+                    ),
+                 child: Padding(padding: 
+                  EdgeInsets.all(15),
+                  child: Column(
+                  children: [
                  Text('Reduces pain and inflammation', textAlign: TextAlign.start, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.bold, fontSize: 20,),),
                  Padding(padding: EdgeInsetsGeometry.all(3)),
                  Text('“One of the chemical compounds in lavender include flavonoids, which are also found in vegetables and fruits, and coumarin. Both have anti-inflammatory and antioxidant actions,” explains Dr. Lin.', textAlign:  TextAlign.justify, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.normal, fontSize: 15),),
                  Padding(padding: EdgeInsetsGeometry.all(15)),
+                 ],
+                ),
+                  ),
+                  ),
 
+                Padding(padding: EdgeInsetsGeometry.all(15)),
+
+                 Container(      
+                    decoration: 
+                    BoxDecoration(borderRadius: BorderRadius.circular(10),
+                    color: Colors.deepPurple[100],
+                    ),
+                 child: Padding(padding: 
+                  EdgeInsets.all(15),
+                  child: Column(
+                  children: [
                  Text('Helps with mood, anxiety and depression', textAlign: TextAlign.start, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.bold, fontSize: 20,),),
                  Padding(padding: EdgeInsetsGeometry.all(3)),
                  Text('“Lavender is known for its ability to calm your nervous system, lift your mood and even lower blood pressure,” Dr. Lin points out.', textAlign:  TextAlign.justify, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.normal, fontSize: 15),),
                  Padding(padding: EdgeInsetsGeometry.all(3)),
                  Text('“For example, lavender essential oil contains important compounds such as linalool, which has been shown to reduce anxiety and lower blood pressure.', textAlign:  TextAlign.justify, style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.normal, fontSize: 15),),
+                 Padding(padding: EdgeInsetsGeometry.all(15)),
+                 ],
+                ),
+                  ),
+                  ),
                  Padding(padding: EdgeInsetsGeometry.all(25)),
- 
+                  
                  Text('Reference:', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
                  
                  Text('https://health.clevelandclinic.org/health-benefits-of-lavender'),
